@@ -1,11 +1,8 @@
 ---
 title: "Capstone Presentation - Next Word Predictor"
 author: "D. Bradford"
-date: "November 26, 2019"
-output: 
-  ioslides_presentation:
-  widescreen: true
-  smaller: true
+date: "November 27, 2019"
+output: ioslides_presentation
 ---
 
 
@@ -50,7 +47,7 @@ plot(myimg, axes = FALSE)
 ## References
 
 * Access the Shiny App: https://dbrad4d.shinyapps.io/ds_capstone
-* This presentation on Rpubs:  
+* This presentation on Rpubs:  http://rpubs.com/dbrad4d/ds_capstone
 * Source files on Github: https://github.com/dbrad4d/ds_capstone
 * Coursera project description:  https://www.coursera.org/learn/data-science-project/peer/EI1l4/final-project-submission
 * RDocumentation for n-grams:  https://www.rdocumentation.org/packages/NLP/versions/0.2-0/topics/ngrams
