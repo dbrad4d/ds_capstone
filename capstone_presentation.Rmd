@@ -49,8 +49,9 @@ plot(myimg, axes = FALSE)
 
 ## References
 
-* Access the Shiny App: https://shtaheri.shinyapps.io/Data_Science_Capstone
-* Source files on Github: https://github.com/shayan-taheri/Data_Science_Capstone
+* Access the Shiny App: https://dbrad4d.shinyapps.io/ds_capstone
+* This presentation on Rpubs:  
+* Source files on Github: https://github.com/dbrad4d/ds_capstone
 * Coursera project description:  https://www.coursera.org/learn/data-science-project/peer/EI1l4/final-project-submission
 * RDocumentation for n-grams:  https://www.rdocumentation.org/packages/NLP/versions/0.2-0/topics/ngrams
 * Katz's back-off model:  https://en.wikipedia.org/wiki/Katz%27s_back-off_model

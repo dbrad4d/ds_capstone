@@ -7,7 +7,7 @@ suppressWarnings(library(shiny))
 shinyUI(fluidPage(
     
     # Application title
-    navbarPage("Data Science Capstone - Next-word Predictor"),
+    navbarPage("Data Science Capstone: Next-word Predictor"),
     
     # Sidebar layout
     sidebarLayout(
