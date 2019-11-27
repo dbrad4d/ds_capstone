@@ -1,0 +1,56 @@
+---
+title: "Capstone Presentation - Next Word Predictor"
+author: "D. Bradford"
+date: "November 26, 2019"
+output: 
+  ioslides_presentation:
+  widescreen: true
+  smaller: true
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(imager)
+```
+
+## Coursera Data Science Capstone - Final Project Submission
+
+* This is the final, peer-graded project for the Data Science Specialization at Coursera.
+* The primary assignment is developing a Shiny app that takes as input a phrase (multiple words) in a text box input and outputs a prediction of the next word.
+* This capability can be applied to several use cases such as simplifying texting on a smartphone, assisting disabled users, or development of an AI chat-bot to reduce customer support costs.
+* The training data set included text from news websites, twitter feeds, and blog posts.  Using R-based text mining and natural language, an algorithm was created to predict the next word of inputed text.
+
+## Learning Algorithm
+
+* We used the N-Gram function to develop our algorithm.  N-Grams are continguous, sub-sequenced of length n of a given sequence.
+* The N-Gram function takes in a sequence (vector), text in this case as input.
+* The N-Gram function returns a positive integer giving the length of contiguous sub-sequences to be computed.
+* For example, 2-grams for the sentence "The cow jumps over the moon" are:  "the cow", "cow jumps", "jumps over", "over the", "the moon".
+* The N-Grams models were cleansed and tabulated using text from news articles, twitter posts, and blogs.
+* The resulting data set (corpus) is comprised of a 1-grams, 2-grams, 3-grams, through 6-grams.
+
+## Prediction Model
+
+* We used Katz's back-off model as our next-word prediction model.
+* This model first searches the 6-grams in the corpus for a prediction, then "backs-off" to the 5-grams if the first search is unsuccessful. 
+* The process continues backwards to the 4-grams, 3-grams, and 2-grams.
+* If the 2-gram search is unsuccessful, then the most frequent 1-grams in the corpus are output as the predicted word.
+
+## App Usability
+
+* The screenshot below illustrates the Shiny next-word prediction application.
+* Use of the app is intuitive.  Simply type in or copy text into the input box and the predicted text will display. 
+
+```{r }
+myimg <- load.image("C:\\Users\\dabradford\\OneDrive - Cox Automotive\\Documents\\GitHub\\ds_capstone\\screen_grab.png")
+plot(myimg, axes = FALSE)
+```
+
+## References
+
+* Access the Shiny App: https://shtaheri.shinyapps.io/Data_Science_Capstone
+* Source files on Github: https://github.com/shayan-taheri/Data_Science_Capstone
+* Coursera project description:  https://www.coursera.org/learn/data-science-project/peer/EI1l4/final-project-submission
+* RDocumentation for n-grams:  https://www.rdocumentation.org/packages/NLP/versions/0.2-0/topics/ngrams
+* Katz's back-off model:  https://en.wikipedia.org/wiki/Katz%27s_back-off_model
